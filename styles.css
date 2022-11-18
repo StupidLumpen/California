@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Readex+Pro&display=swap');
 
 /*Обнуление стилей*/
-*::after,*::before {
+*,*::after,*::before {
     margin: 0;
     padding: 0;
     border: none;
@@ -18,4 +18,114 @@
     --color--white-gray: #F5F5F5;
     --color--footer-white: #F8F9FA;
     --color--black: #000000;
+} 
+
+/*общие стили */
+.wrapper {
+    max-width: 1350px;
+    width: 1350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.link {
+    font-family: 'Inter';
+    font-weight: 400;
+    color: var(--color--black);
+}
+
+/*nav*/
+.nav {
+    width: 100%;
+    padding: 30px 73px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 285px;
+}
+
+.nav__link {
+    font-size: 14px;
+    margin-left: 45px;
+    text-transform: uppercase;
+}
+
+.nav__link:first-of-type {
+    margin-left: 0px;
+}
+
+.nav__button {
+    width: 24px;
+    height: 24px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.nav__button:first-of-type {
+    margin-left: 300px;
+}
+
+.small-button {
+    display: none;
+}
+
+@media screen and (max-width: 1640px) {
+    .nav__info {
+        padding-left: 100px;
+    }
+
+    .nav__button:first-of-type {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    .nav__info {
+        padding-left: 50px;
+    }
+
+    .nav__button:first-of-type {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .nav__info {
+        display: none;
+    }
+
+    .small-button {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+    }
+
+    .small-button__line {
+        width: 25px;
+        background-color: var(--color--black);
+        border: solid 1px var(--color--black);
+    }
+
+    .small-button__line:first-of-type {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .small-button {
+        margin-left: 30px;
+    }
+}
+
+
+
+
